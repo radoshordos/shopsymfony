@@ -1,0 +1,5 @@
+admin_prod_dph:
+    resource: "@AdminProdDphBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
