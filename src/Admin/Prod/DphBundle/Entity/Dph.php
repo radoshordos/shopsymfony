@@ -29,9 +29,9 @@ class Dph
     private $visible;
 
     /**
-     * @var string
+     * @var float
      *
-     * @ORM\Column(name="multiple", type="decimal")
+     * @ORM\Column(name="multiple", type="float")
      */
     private $multiple;
 
