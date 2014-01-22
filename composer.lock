@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "2c0295f7b959d7cc894ee1a78d4f3b41",
+    "hash": "2e37d87ee00d7108f79110f1af8380ad",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -796,6 +796,50 @@
             "time": "2013-07-19 00:03:27"
         },
         {
+            "name": "kutny/tracy-bundle",
+            "version": "dev-master",
+            "target-dir": "Kutny/TracyBundle",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/kutny/tracy-bundle.git",
+                "reference": "1fafe16dbba5a2aab3cfb0016a8bf471d79d63a5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/kutny/tracy-bundle/zipball/1fafe16dbba5a2aab3cfb0016a8bf471d79d63a5",
+                "reference": "1fafe16dbba5a2aab3cfb0016a8bf471d79d63a5",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.2",
+                "tracy/tracy": "v0.9.0"
+            },
+            "type": "symfony-bundle",
+            "autoload": {
+                "psr-0": {
+                    "Kutny\\TracyBundle": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jiri Koutny",
+                    "email": "jirkakoutny@gmail.com"
+                }
+            ],
+            "description": "Nette Tracy debugger for Symfony",
+            "homepage": "https://github.com/kutny/tracy-bundle",
+            "keywords": [
+                "debug",
+                "debugging",
+                "nette"
+            ],
+            "time": "2013-12-23 13:40:37"
+        },
+        {
             "name": "monolog/monolog",
             "version": "1.7.0",
             "source": {
@@ -1438,6 +1482,57 @@
             "time": "2014-01-05 02:12:11"
         },
         {
+            "name": "tracy/tracy",
+            "version": "v0.9.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nette/tracy.git",
+                "reference": "40dd613acb0dc3fa1b733a10590ca27a54f466d2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nette/tracy/zipball/40dd613acb0dc3fa1b733a10590ca27a54f466d2",
+                "reference": "40dd613acb0dc3fa1b733a10590ca27a54f466d2",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "nette/tester": "@dev"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "src/Tracy"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause",
+                "GPL-2.0",
+                "GPL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "David Grudl",
+                    "homepage": "http://davidgrudl.com"
+                },
+                {
+                    "name": "Nette Community",
+                    "homepage": "http://nette.org/contributors"
+                }
+            ],
+            "description": "Debugger for PHP",
+            "homepage": "http://tracy.nette.org",
+            "keywords": [
+                "debug",
+                "debugger",
+                "nette"
+            ],
+            "time": "2013-12-13 00:34:46"
+        },
+        {
             "name": "twig/extensions",
             "version": "v1.0.1",
             "source": {
@@ -1541,9 +1636,9 @@
 
     ],
     "minimum-stability": "stable",
-    "stability-flags": [
-
-    ],
+    "stability-flags": {
+        "kutny/tracy-bundle": 20
+    },
     "platform": {
         "php": ">=5.3.3"
     },
