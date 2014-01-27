@@ -1,35 +1,27 @@
 {% extends '::base.html.twig' %}
 
 {% block body -%}
-    <h1>Dph list</h1>
+    <h1>Přehled DPH</h1>
 
-    <table class="records_list">
+    <table class="records_list table">
         <thead>
             <tr>
-                <th>Id</th>
-                <th>Visible</th>
+                <th>ID</th>
+                <th>Zobrazovat</th>
                 <th>Multiple</th>
-                <th>Name</th>
-                <th>Actions</th>
+                <th>Název</th>
             </tr>
         </thead>
         <tbody>
         {% for entity in entities %}
             <tr>
-                <td><a href="{{ path('dph_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
-                <td>{{ entity.visible }}</td>
+                <td>{{ entity.id }}</td>
+                <td>{{ entity.visible ? "ANO" : "NE" }}</td>
                 <td>{{ entity.multiple }}</td>
                 <td>{{ entity.name }}</td>
-                <td>
-                <ul>
-                    <li>
-                        <a href="{{ path('dph_show', { 'id': entity.id }) }}">show</a>
-                    </li>
-                </ul>
-                </td>
             </tr>
         {% endfor %}
         </tbody>
     </table>
 
-    {% endblock %}
+{% endblock %}

@@ -20,13 +20,9 @@
         "sensio/generator-bundle": "~2.3",
         "incenteev/composer-parameter-handler": "~2.0",
         "kutny/tracy-bundle": "dev-master",
-        "braincrafted/bootstrap-bundle": "v2.0.0",
-        "knplabs/knp-paginator-bundle": "2.4.0",
-        "knplabs/knp-menu": "2.0.*@dev",
-        "knplabs/knp-menu-bundle": "2.0.*@dev",
-        "twbs/bootstrap": "3.0.*@dev",
-        "leafo/lessphp": "0.4.0",
-        "components/jquery": "dev-master"
+        "components/jquery": "dev-master",
+        "twitter/bootstrap": "3.0.*@dev",
+        "leafo/lessphp": "0.4.*@dev"
     },
     "scripts": {
         "post-install-cmd": [
