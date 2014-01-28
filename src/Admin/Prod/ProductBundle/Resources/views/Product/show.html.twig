@@ -1,0 +1,52 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+    <h1>Product</h1>
+
+    <table class="record_properties">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ entity.id }}</td>
+            </tr>
+            <tr>
+                <th>Createat</th>
+                <td>{{ entity.createAt|date('Y-m-d H:i:s') }}</td>
+            </tr>
+            <tr>
+                <th>Isnew</th>
+                <td>{{ entity.isNew }}</td>
+            </tr>
+            <tr>
+                <th>Prodalias</th>
+                <td>{{ entity.prodAlias }}</td>
+            </tr>
+            <tr>
+                <th>Prodname</th>
+                <td>{{ entity.prodName }}</td>
+            </tr>
+            <tr>
+                <th>Dphid</th>
+                <td>{{ entity.dphId }}</td>
+            </tr>
+            <tr>
+                <th>Price</th>
+                <td>{{ entity.price }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('product') }}">
+            Back to the list
+        </a>
+    </li>
+    <li>
+        <a href="{{ path('product_edit', { 'id': entity.id }) }}">
+            Edit
+        </a>
+    </li>
+    <li>{{ form(delete_form) }}</li>
+</ul>
+{% endblock %}

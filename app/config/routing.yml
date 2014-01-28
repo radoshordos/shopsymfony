@@ -1,3 +1,8 @@
+admin_prod_product:
+    resource: "@AdminProdProductBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
 admin_prod_dph:
     resource: "@AdminProdDphBundle/Controller/"
     type:     annotation
