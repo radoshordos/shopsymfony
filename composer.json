@@ -21,7 +21,7 @@
         "incenteev/composer-parameter-handler": "~2.0",
         "kutny/tracy-bundle": "dev-master",
         "components/jquery": "dev-master",
-        "twitter/bootstrap": "3.0.*@dev",
+        "twitter/bootstrap": "3.1.*@dev",
         "leafo/lessphp": "0.4.*@dev"
     },
     "scripts": {

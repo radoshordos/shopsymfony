@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "e0f8686e51d5bc64e749974905b6c052",
+    "hash": "c74acbb2771841d23ebc98857b5f0cf6",
     "packages": [
         {
             "name": "components/jquery",
@@ -1446,17 +1446,17 @@
         },
         {
             "name": "symfony/swiftmailer-bundle",
-            "version": "v2.3.4",
+            "version": "v2.3.5",
             "target-dir": "Symfony/Bundle/SwiftmailerBundle",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/SwiftmailerBundle.git",
-                "reference": "f5e5d12629c26a835c7aa1d74e2e041486b92d93"
+                "reference": "fcefa9dbd5a1ed20547b0f8a2afd5ad6837ea321"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/SwiftmailerBundle/zipball/f5e5d12629c26a835c7aa1d74e2e041486b92d93",
-                "reference": "f5e5d12629c26a835c7aa1d74e2e041486b92d93",
+                "url": "https://api.github.com/repos/symfony/SwiftmailerBundle/zipball/fcefa9dbd5a1ed20547b0f8a2afd5ad6837ea321",
+                "reference": "fcefa9dbd5a1ed20547b0f8a2afd5ad6837ea321",
                 "shasum": ""
             },
             "require": {
@@ -1497,7 +1497,7 @@
             ],
             "description": "Symfony SwiftmailerBundle",
             "homepage": "http://symfony.com",
-            "time": "2013-08-22 13:32:58"
+            "time": "2013-11-21 12:29:01"
         },
         {
             "name": "symfony/symfony",
@@ -1761,16 +1761,16 @@
         },
         {
             "name": "twitter/bootstrap",
-            "version": "dev-master",
+            "version": "v3.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/twbs/bootstrap.git",
-                "reference": "45ea456468b331f3c1fef8ec1598c723608264b4"
+                "reference": "1409cde7e800ca83fd761f87e5ad8f0d259e38d1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twbs/bootstrap/zipball/45ea456468b331f3c1fef8ec1598c723608264b4",
-                "reference": "45ea456468b331f3c1fef8ec1598c723608264b4",
+                "url": "https://api.github.com/repos/twbs/bootstrap/zipball/1409cde7e800ca83fd761f87e5ad8f0d259e38d1",
+                "reference": "1409cde7e800ca83fd761f87e5ad8f0d259e38d1",
                 "shasum": ""
             },
             "type": "library",
@@ -1799,7 +1799,7 @@
                 "bootstrap",
                 "css"
             ],
-            "time": "2014-01-27 17:42:33"
+            "time": "2014-01-30 16:30:37"
         }
     ],
     "packages-dev": [

@@ -34,6 +34,7 @@ class ProductType extends AbstractType
         ));
     }
 
+
     /**
      * @return string
      */

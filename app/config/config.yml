@@ -62,11 +62,16 @@ assetic:
         bootstrap_less:
             inputs:
                 - '%kernel.root_dir%/../vendor/twitter/bootstrap/dist/css/bootstrap.min.css'
+                - '%kernel.root_dir%/../vendor/twitter/bootstrap/dist/css/bootstrap.min.css'
                 - '%kernel.root_dir%/Resources/less/mystyle.less'
             filters:
                 - lessphp
                 - cssrewrite
             output: css/bootstrap.css
+        dashboard_css:
+            inputs:
+                - '%kernel.root_dir%/Resources/css/dashboard.css'
+            output: css/dashboard.css
 
 # Twig Configuration
 twig:
