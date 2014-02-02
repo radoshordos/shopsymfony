@@ -19,9 +19,13 @@ class ProductType extends AbstractType
             ->add('isNew')
             ->add('prodAlias')
             ->add('prodName')
-            ->add('dphId')
-            ->add('price')
-        ;
+            ->add('dphId','entity',array(
+                'class' => 'AdminProdDphBundle:Dph',
+                'query_builder' => function($repository) { return $repository->createQueryBuilder('p')->where('p.visible = 1'); },
+                'property' => 'name',
+                'multiple' => false,
+            ))
+            ->add('price');
     }
     
     /**
