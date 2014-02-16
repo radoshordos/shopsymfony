@@ -20,9 +20,10 @@
         "sensio/generator-bundle": "~2.3",
         "incenteev/composer-parameter-handler": "~2.0",
         "kutny/tracy-bundle": "dev-master",
-        "components/jquery": "dev-master",
+        "components/jquery": "1.11.*@dev",
         "twitter/bootstrap": "3.1.*@dev",
-        "leafo/lessphp": "0.4.*@dev"
+        "leafo/lessphp": "0.4.*@dev",
+        "knplabs/knp-menu-bundle": "1.1.*@dev"
     },
     "scripts": {
         "post-install-cmd": [

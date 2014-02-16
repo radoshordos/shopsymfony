@@ -14,6 +14,7 @@ class ProductType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
+
         $builder
             ->add('createAt')
             ->add('isNew')
@@ -22,10 +23,9 @@ class ProductType extends AbstractType
             ->add('dphId','entity',array(
                 'class' => 'AdminProdDphBundle:Dph',
                 'query_builder' => function($repository) { return $repository->createQueryBuilder('p')->where('p.visible = 1'); },
-                'property' => 'name',
-                'multiple' => false,
+                'property' => 'name'
             ))
-            ->add('price');
+            ->add('price','integer');
     }
     
     /**

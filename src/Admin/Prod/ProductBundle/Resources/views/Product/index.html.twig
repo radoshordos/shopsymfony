@@ -6,9 +6,6 @@
     <table class="records_list">
         <thead>
             <tr>
-                <th>Id</th>
-                <th>Createat</th>
-                <th>Isnew</th>
                 <th>Prodalias</th>
                 <th>Prodname</th>
                 <th>Dphid</th>
@@ -20,8 +17,7 @@
         {% for entity in entities %}
             <tr>
                 <td><a href="{{ path('product_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
-                <td>{% if entity.createAt %}{{ entity.createAt|date('Y-m-d H:i:s') }}{% endif %}</td>
-                <td>{{ entity.isNew }}</td>
+
                 <td>{{ entity.prodAlias }}</td>
                 <td>{{ entity.prodName }}</td>
                 <td>{{ entity.dphId }}</td>

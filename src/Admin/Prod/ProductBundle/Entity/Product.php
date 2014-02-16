@@ -51,7 +51,8 @@ class Product
 
     /**
      * @var integer
-     *
+     * @ORM\ManyToOne(targetEntity="AdminProdDph:Dph")
+     * @ORM\JoinColumn(name="dph_id", referencedColumnName="id")
      * @ORM\Column(name="dphId", type="smallint")
      */
     private $dphId;

@@ -5,10 +5,10 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-{% block stylesheets %}
-        <link href="{{ asset('/css/bootstrap.css') }}" rel="stylesheet" media="screen">
-        <link href="{{ asset('/css/dashboard.css') }}" rel="stylesheet" media="screen">
-{% endblock %}
+        {% block stylesheets %}
+            <link href="{{ asset('/css/bootstrap.css') }}" rel="stylesheet" media="screen">
+            <link href="{{ asset('/css/dashboard.css') }}" rel="stylesheet" media="screen">
+        {% endblock %}
 
     </head>
     <body>
@@ -29,9 +29,24 @@
                     <ul class="nav navbar-nav">
                         <li><a href="/dph/">DPH</a></li>
                         <li><a href="/product/">Product</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Nástroje <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/tools/calculator">Calculator</a></li>
+                            </ul>
                     </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Uživatel <b
+                                        class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Profil</a></li>
+                                <li><a href="#">Logout</a></li>
+                            </ul>
+                        </li>
+                        <!--/.nav-collapse -->
                 </div>
-                <!--/.nav-collapse -->
             </div>
         </div>
 

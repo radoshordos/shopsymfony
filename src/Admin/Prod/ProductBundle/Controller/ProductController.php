@@ -134,7 +134,6 @@ class ProductController extends Controller
     public function editAction($id)
     {
         $em = $this->getDoctrine()->getManager();
-
         $entity = $em->getRepository('AdminProdProductBundle:Product')->find($id);
 
         if (!$entity) {

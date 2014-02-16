@@ -35,25 +35,5 @@ class DphController extends Controller
         );
     }
 
-    /**
-     * Finds and displays a Dph entity.
-     *
-     * @Route("/{id}", name="dph_show")
-     * @Method("GET")
-     * @Template()
-     */
-    public function showAction($id)
-    {
-        $em = $this->getDoctrine()->getManager();
 
-        $entity = $em->getRepository('AdminProdDphBundle:Dph')->find($id);
-
-        if (!$entity) {
-            throw $this->createNotFoundException('Unable to find Dph entity.');
-        }
-
-        return array(
-            'entity'      => $entity,
-        );
-    }
 }

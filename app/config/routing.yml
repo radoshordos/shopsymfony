@@ -1,3 +1,8 @@
+admin_tools_calculator:
+    resource: "@AdminToolsCalculatorBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
 admin_prod_product:
     resource: "@AdminProdProductBundle/Controller/"
     type:     annotation
