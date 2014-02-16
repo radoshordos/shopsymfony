@@ -4,7 +4,7 @@ imports:
 
 framework:
     #esi:             ~
-    #translator:      { fallback: "%locale%" }
+    translator:      { fallback: "%locale%" }
     secret:          "%secret%"
     router:
         resource: "%kernel.root_dir%/config/routing.yml"
@@ -30,48 +30,48 @@ assetic:
     bundles:        [ ]
     java: /usr/bin/java
     filters:
-        cssrewrite: ~
+        cssembed:
+          jar: %kernel.root_dir%/Resources/java/cssembed-0.4.5.jar
         yui_js:
-          jar: %kernel.root_dir%/Resources/java/yuicompressor.jar
+          jar: %kernel.root_dir%/Resources/java/yuicompressor-2.4.8.jar
         lessphp:
             file: %kernel.root_dir%/../vendor/leafo/lessphp/lessc.inc.php
-            apply_to: ".less$"
-            debug: "%kernel.debug%"
-            use_controller: true
+            apply_to: ".Xless$"
         cssrewrite: ~
     assets:
         jquery_js:
             inputs:
                 - '%kernel.root_dir%/../components/jquery/jquery.min.js'
+                - 'kernel.root_dir%/Resources/js/less-1.6.3.min.jar'
             filters: [?yui_js]
         bootstrap_js:
             inputs:
-                - '%kernel.root_dir%/../vendor/twitter/bootstrap/js/transition.js'
-                - '%kernel.root_dir%/../vendor/twitter/bootstrap/js/alert.js'
-                - '%kernel.root_dir%/../vendor/twitter/bootstrap/js/modal.js'
-                - '%kernel.root_dir%/../vendor/twitter/bootstrap/js/dropdown.js'
-                - '%kernel.root_dir%/../vendor/twitter/bootstrap/js/scrollspy.js'
-                - '%kernel.root_dir%/../vendor/twitter/bootstrap/js/tab.js'
-                - '%kernel.root_dir%/../vendor/twitter/bootstrap/js/tooltip.js'
-                - '%kernel.root_dir%/../vendor/twitter/bootstrap/js/popover.js'
-                - '%kernel.root_dir%/../vendor/twitter/bootstrap/js/button.js'
-                - '%kernel.root_dir%/../vendor/twitter/bootstrap/js/collapse.js'
-                - '%kernel.root_dir%/../vendor/twitter/bootstrap/js/carousel.js'
-                - '%kernel.root_dir%/../vendor/twitter/bootstrap/js/affix.js'
+                - '%kernel.root_dir%/../vendor/twbs/bootstrap/js/transition.js'
+                - '%kernel.root_dir%/../vendor/twbs/bootstrap/js/alert.js'
+                - '%kernel.root_dir%/../vendor/twbs/bootstrap/js/modal.js'
+                - '%kernel.root_dir%/../vendor/twbs/bootstrap/js/dropdown.js'
+                - '%kernel.root_dir%/../vendor/twbs/bootstrap/js/scrollspy.js'
+                - '%kernel.root_dir%/../vendor/twbs/bootstrap/js/tab.js'
+                - '%kernel.root_dir%/../vendor/twbs/bootstrap/js/tooltip.js'
+                - '%kernel.root_dir%/../vendor/twbs/bootstrap/js/popover.js'
+                - '%kernel.root_dir%/../vendor/twbs/bootstrap/js/button.js'
+                - '%kernel.root_dir%/../vendor/twbs/bootstrap/js/collapse.js'
+                - '%kernel.root_dir%/../vendor/twbs/bootstrap/js/carousel.js'
+                - '%kernel.root_dir%/../vendor/twbs/bootstrap/js/affix.js'
             filters: [?yui_js]
         bootstrap_less:
             inputs:
-                - '%kernel.root_dir%/../vendor/twitter/bootstrap/dist/css/bootstrap.min.css'
-                - '%kernel.root_dir%/../vendor/twitter/bootstrap/dist/css/bootstrap.min.css'
+                - '%kernel.root_dir%/../vendor/twbs/bootstrap/less/bootstrap.less'
                 - '%kernel.root_dir%/Resources/less/mystyle.less'
             filters:
-                - lessphp
                 - cssrewrite
             output: css/bootstrap.css
         dashboard_css:
             inputs:
                 - '%kernel.root_dir%/Resources/css/dashboard.css'
             output: css/dashboard.css
+braincrafted_bootstrap:
+    less_filter: lessphp
 
 # Twig Configuration
 twig:
@@ -110,3 +110,26 @@ knp_menu:
         template: knp_menu.html.twig
     templating: false # if true, enables the helper for PHP templates
     default_renderer: twig # The renderer to use, list is also available by default
+
+
+# app/config/config.yml
+braincrafted_bootstrap:
+    output_dir:
+    assets_dir: %kernel.root_dir%/../vendor/twbs/bootstrap
+    jquery_path: %kernel.root_dir%/../vendor/components/jquery/jquery.min.js
+    less_filter: lessphp # "less", "lessphp" or "none"
+    auto_configure:
+        assetic: true
+        twig: true
+        knp_menu: true
+        knp_paginator: true
+    customize:
+        variables_file: ~
+        bootstrap_output: %kernel.root_dir%/Resources/less/bootstrap.less
+        bootstrap_template: BraincraftedBootstrapBundle:Bootstrap:bootstrap.less.twig
+
+# app/config/config.yml
+fos_user:
+    db_driver: orm # other valid values are 'mongodb', 'couchdb' and 'propel'
+    firewall_name: main
+    user_class: Admin\UserBundle\Entity\User

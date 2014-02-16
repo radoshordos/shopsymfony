@@ -9,7 +9,7 @@ class CalculatorType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('string', 'text');
+        $builder->add('string', 'text', array('required' => false));
         $builder->add('md5', 'text', array('required' => false, 'disabled' => true));
         $builder->add('sha1', 'text', array('required' => false, 'disabled' => true));
         $builder->add('time', 'text', array('required' => false, 'disabled' => true));
@@ -17,6 +17,7 @@ class CalculatorType extends AbstractType
             'attr' => array('class' => 'btn btn-primary btn-lg center'),
             'label' => 'Spočítat'
         ));
+
     }
 
     public function getName()

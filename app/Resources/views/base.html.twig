@@ -9,7 +9,6 @@
             <link href="{{ asset('/css/bootstrap.css') }}" rel="stylesheet" media="screen">
             <link href="{{ asset('/css/dashboard.css') }}" rel="stylesheet" media="screen">
         {% endblock %}
-
     </head>
     <body>
 
@@ -34,8 +33,12 @@
                             <ul class="dropdown-menu">
                                 <li><a href="/tools/calculator">Calculator</a></li>
                             </ul>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Konfigurace <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/userconfig/xmlfeed">XML Feed</a></li>
+                            </ul>
                     </ul>
-
                     <ul class="nav navbar-nav navbar-right">
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Uživatel <b
