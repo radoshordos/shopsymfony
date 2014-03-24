@@ -19,7 +19,7 @@
         "sensio/framework-extra-bundle": "~3.0",
         "sensio/generator-bundle": "~2.3",
         "incenteev/composer-parameter-handler": "~2.0",
-        "kutny/tracy-bundle": "dev-master",
+        "tracy/tracy": "v0.9.0",
         "components/jquery": "1.11.*@dev",
         "twbs/bootstrap": "3.1.*@dev",
         "leafo/lessphp": "dev-master",
